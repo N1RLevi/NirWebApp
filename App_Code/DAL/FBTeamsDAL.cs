@@ -30,12 +30,36 @@ namespace DAL
             DataTable sqlDT = new DataTable();
 
             sqlDa.Fill(sqlDT);
+            sqlCon.Close();
             return sqlDT;
 
 
         }
 
+        public static DataTable GetById(int Id)
+        {
 
+
+            string strHibor = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\dolev\\Desktop\\NirLeviProject\\NirWebApp\\App_Data\\NirDataBaseTeams.mdf;Integrated Security=True;Connect Timeout=30";
+
+            SqlConnection sqlCon = new SqlConnection(strHibor);
+
+            sqlCon.Open();
+
+            string sqlShitla = "SELECT * FROM T_FTeams WHERE IdTeam =" + Id;
+
+            SqlCommand sqlCMD = new SqlCommand(sqlShitla, sqlCon);
+
+            SqlDataAdapter sqlDa = new SqlDataAdapter();
+            sqlDa.SelectCommand = sqlCMD;
+
+            DataTable sqlDT = new DataTable();
+
+            sqlDa.Fill(sqlDT);
+            sqlCon.Close();
+            return sqlDT;
+
+        }
 
     }
 }

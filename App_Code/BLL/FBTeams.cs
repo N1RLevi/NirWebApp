@@ -22,6 +22,11 @@ namespace BLL
             return FBTeamsDAL.Get();
         }
 
+        public static DataTable GetById(int Id)
+        {
+            return FBTeamsDAL.GetById(Id);
+        }
+
 
     }
 }
