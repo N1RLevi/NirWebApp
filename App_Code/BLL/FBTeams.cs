@@ -27,6 +27,9 @@ namespace BLL
             return FBTeamsDAL.GetById(Id);
         }
 
-
+        public static int Delete(int Id)
+        {
+            return FBTeamsDAL.Delete(Id);
+        }
     }
 }

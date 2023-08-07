@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Web;
 using BLL;
@@ -60,6 +61,23 @@ namespace DAL
             return sqlDT;
 
         }
+
+
+        public static int Delete(int Id)
+        {
+            string strHibor = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\dolev\\Desktop\\NirLeviProject\\NirWebApp\\App_Data\\NirDataBaseTeams.mdf;Integrated Security=True;Connect Timeout=30";
+            SqlConnection sqlCon = new SqlConnection(strHibor);
+
+            sqlCon.Open();
+            string sqlShitla = "Delete From T_FTeams Where IdTeam = " + Id;
+            SqlCommand sqlCMD = new SqlCommand(sqlShitla, sqlCon);
+
+            int AffectedRows = sqlCMD.ExecuteNonQuery();
+            sqlCon.Close();
+            return AffectedRows;
+        }
+
+
 
     }
 }

@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FootballTeamDelete.aspx" />
     <Content Include="FootballTeams.aspx" />
     <Content Include="FootballTeamsById.aspx" />
     <Content Include="Global.asax" />
@@ -75,6 +76,13 @@
   <ItemGroup>
     <Compile Include="App_Code\BLL\FBTeams.cs" />
     <Compile Include="App_Code\DAL\FBTeamsDAL.cs" />
+    <Compile Include="FootballTeamDelete.aspx.cs">
+      <DependentUpon>FootballTeamDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FootballTeamDelete.aspx.designer.cs">
+      <DependentUpon>FootballTeamDelete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FootballTeams.aspx.cs">
       <DependentUpon>FootballTeams.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
