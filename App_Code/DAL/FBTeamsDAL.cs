@@ -15,7 +15,7 @@ namespace DAL
         public static DataTable Get()
         {
 
-            string strHibor = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\dolev\\Desktop\\NirLeviProject\\NirWebApp\\App_Data\\NirDataBaseTeams.mdf;Integrated Security=True;Connect Timeout=30";
+            string strHibor = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\NirDataBaseTeams.mdf';Integrated Security=True;Connect Timeout=30";
 
             SqlConnection sqlCon = new SqlConnection(strHibor);
 
@@ -41,7 +41,7 @@ namespace DAL
         {
 
 
-            string strHibor = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\dolev\\Desktop\\NirLeviProject\\NirWebApp\\App_Data\\NirDataBaseTeams.mdf;Integrated Security=True;Connect Timeout=30";
+            string strHibor = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\NirDataBaseTeams.mdf';Integrated Security=True;Connect Timeout=30";
 
             SqlConnection sqlCon = new SqlConnection(strHibor);
 
@@ -65,7 +65,7 @@ namespace DAL
 
         public static int Delete(int Id)
         {
-            string strHibor = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\dolev\\Desktop\\NirLeviProject\\NirWebApp\\App_Data\\NirDataBaseTeams.mdf;Integrated Security=True;Connect Timeout=30";
+            string strHibor = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\NirDataBaseTeams.mdf';Integrated Security=True;Connect Timeout=30";
             SqlConnection sqlCon = new SqlConnection(strHibor);
 
             sqlCon.Open();
@@ -80,7 +80,7 @@ namespace DAL
 
         public static int InsertOrUpdate(FBTeams Team)
         {
-            string strHibor = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\dolev\\Desktop\\NirLeviProject\\NirWebApp\\App_Data\\NirDataBaseTeams.mdf;Integrated Security=True;Connect Timeout=30";
+            string strHibor = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\NirDataBaseTeams.mdf';Integrated Security=True;Connect Timeout=30";
             SqlConnection sqlCon = new SqlConnection(strHibor);
 
             sqlCon.Open();
