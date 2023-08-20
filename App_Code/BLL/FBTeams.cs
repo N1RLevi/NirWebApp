@@ -31,5 +31,13 @@ namespace BLL
         {
             return FBTeamsDAL.Delete(Id);
         }
+
+
+        public static int InsertOrUpdate(FBTeams team)
+        {
+            return FBTeamsDAL.InsertOrUpdate(team);
+        }
+
+
     }
 }

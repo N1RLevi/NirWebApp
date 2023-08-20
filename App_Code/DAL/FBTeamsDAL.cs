@@ -78,6 +78,37 @@ namespace DAL
         }
 
 
+        public static int InsertOrUpdate(FBTeams Team)
+        {
+            string strHibor = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\dolev\\Desktop\\NirLeviProject\\NirWebApp\\App_Data\\NirDataBaseTeams.mdf;Integrated Security=True;Connect Timeout=30";
+            SqlConnection sqlCon = new SqlConnection(strHibor);
+
+            sqlCon.Open();
+            string sqlShitla ;
+
+            if (Team.IdTeam == -1)
+                sqlShitla = "insert into T_FTeams (TeamName,GamesPlayed,Wins,Draws,Losses,Points,Tpic) values (N'" + Team.TeamName + "'," + Team.GamesPlayed + ",'" + Team.Wins + "','" + Team.Draws + "','" + Team.Losses + "','" + Team.Points + "',N'" + Team.Tpic + "')";
+            else
+                sqlShitla = "UPDATE T_FTeams SET TeamName = N'" + Team.TeamName + "', GamesPlayed = " + Team.GamesPlayed + ", Wins = " + Team.Wins + ", Draws = " + Team.Draws + ", Losses = " + Team.Losses + ", Points = " + Team.Points + ", Tpic = N'" + Team.Tpic + "' WHERE IdTeam = " + Team.IdTeam;
+
+
+            SqlCommand sqlCMD = new SqlCommand(sqlShitla, sqlCon);
+
+            int AffectedRows = sqlCMD.ExecuteNonQuery();
+
+
+            sqlCon.Close();
+            return AffectedRows;
+
+
+
+
+
+
+
+        }
+
+
 
     }
 }

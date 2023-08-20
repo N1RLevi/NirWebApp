@@ -71,6 +71,7 @@
     <Content Include="FootballTeams.aspx" />
     <Content Include="FootballTeamsById.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="FootballTeamInsertOrUpdateWeb.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +100,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="FootballTeamInsertOrUpdateWeb.aspx.cs">
+      <DependentUpon>FootballTeamInsertOrUpdateWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FootballTeamInsertOrUpdateWeb.aspx.designer.cs">
+      <DependentUpon>FootballTeamInsertOrUpdateWeb.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
