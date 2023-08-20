@@ -14,6 +14,7 @@ namespace NirWebApp
         protected void Application_Start(object sender, EventArgs e)
         {
             Application["TableTeams"] = FBTeams.Get();
+
         }
 
         protected void Session_Start(object sender, EventArgs e)

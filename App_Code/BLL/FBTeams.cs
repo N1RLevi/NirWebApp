@@ -22,6 +22,22 @@ namespace BLL
             return FBTeamsDAL.Get();
         }
 
+        public static DataTable GetById(int Id)
+        {
+            return FBTeamsDAL.GetById(Id);
+        }
+
+        public static int Delete(int Id)
+        {
+            return FBTeamsDAL.Delete(Id);
+        }
+
+
+        public static int InsertOrUpdate(FBTeams team)
+        {
+            return FBTeamsDAL.InsertOrUpdate(team);
+        }
+
 
     }
 }
