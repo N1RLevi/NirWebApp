@@ -1,19 +1,30 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PageMasterNir.Master" AutoEventWireup="true" CodeBehind="FootballTeams.aspx.cs" Inherits="NirWebApp.FootballTeams" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageMasterNir.master.cs" Inherits="NirWebApp.PageMasterNir" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<!DOCTYPE html>
 
-
-     
-
-
-    <div class="CenterCenter">
-        <h1 class="TitleOne"> ניר לוי </h1>
-        <h1 class="TitleOne">טבלת קבוצות ליגת העל </h1>
-    </div>
+<html>
+<head runat="server">
+    
 
 
 
-   <div class="CenterCenter" >
+    <title></title>
+     <link rel="stylesheet" type="text/css" href="NiRizov.css">
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+
+                <div class="CenterCenter" >
     <table  class="TableClass"  >
         <tr class="TableTr">
              <th class="TableTh" >ID של הקבוצות</th>
@@ -47,5 +58,11 @@
    </div>
 
 
-</asp:Content>
 
+
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

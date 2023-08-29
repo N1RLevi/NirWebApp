@@ -1,67 +1,66 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FootballTeamsById.aspx.cs" Inherits="NirWebApp.FootballTeamsById" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PageMasterNir.Master" AutoEventWireup="true" CodeBehind="FootballTeamsById.aspx.cs" Inherits="NirWebApp.FootballTeamsById" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+ 
+        <div  class="CenterCenter" >
+            <h1 class="TitleOne" >ניר לוי </h1>
+            <h1 class="TitleOne" >טבלת קבוצות ליגת העל </h1>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-    
-    <style>
+            <div class="CenterCenter" >
+                <h1 class="TitleOne" >  הזן איידי , ולחץ על כפתור שליחה</h1>
 
-        img{
-            width:30px;
-            height:30px;            
-        }
-        table{
-            text-align:center;
-        }
-    </style>
-    <body>
-    
-    <form id="form1" runat="server">
-        <div>
-            <h1>ניר לוי </h1>
-            <h1>טבלת קבוצות ליגת העל </h1>
+                <asp:Button Class="btnSend" ID="btnSubmit" runat="server" Text="שלח" name="btnSubmit" OnClick="btnSubmit_Click" />
+                <asp:TextBox  Class="txtBox" ID="txtId" name="txtId" runat="server" placeholder="להצגת הרשומה ID הזן מספר"  />   
+            
+       </div>
 
-            <div>
-                <h1>הזן ID ולחץ על כפתור שליחה</h1>
 
-                <asp:Button  ID="btnSubmit" runat="server" Text="שלח"  name="btnSubmit" onclick="btnSubmit_Click" />
-                <asp:TextBox ID="txtId" name="txtId" runat="server" placeholder="להצגת הרשומה ID הזן מספר "  />   
-
-            </div>
-
-            <table border="1">
-                <tr>
-                     <th>ID של הקבוצות</th>
-                     <th>שם הקבוצה</th>
-                     <th>משחקים</th>
-                     <th>ניצחונות</th>
-                     <th>הפסדים</th>
-                     <th>תיקו</th>
-                     <th>נקודות</th>
-                     <th>סמל הקבוצה</th>
-                </tr>
-                <asp:Repeater id="repTableTeams" runat="server">
-                     <ItemTemplate>
-                    <tr>
-                        <td><%#Eval("IdTeam") %></td>
-                        <td><%#Eval("TeamName") %></td>
-                        <td><%#Eval("GamesPlayed") %></td>
-                        <td><%#Eval("Wins") %></td>
-                        <td><%#Eval("Draws") %></td>
-                        <td><%#Eval("Losses") %></td>
-                        <td><%#Eval("Points") %></td>
-                        <td><img src='<%#Eval("Tpic") %>' alt='<%#Eval("TeamName") + "סמל של" %>' /></td>
-                    </tr>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </table>
-        </div>
-    </form>
-</body>
+            
+   <div class="CenterCenter" >
+    <table  class="TableClass"  >
+        <tr class="TableTr">
+             <th class="TableTh" >ID של הקבוצות</th>
+             <th class="TableTh" >שם הקבוצה</th>
+             <th class="TableTh" >משחקים</th>
+             <th class="TableTh" >ניצחונות</th>
+             <th class="TableTh" >הפסדים</th>
+             <th class="TableTh" >תיקו</th>
+             <th class="TableTh" >נקודות</th>
+             <th class="TableTh" >סמל הקבוצה</th>
+        </tr>
+        <asp:Repeater id="repTableTeams" runat="server">
+             <ItemTemplate>
+            <tr class="TableTr">
+                <td class="TableTd" ><%#Eval("IdTeam") %></tdclass="TableTr>
+                <td class="TableTd" ><%#Eval("TeamName") %></td>
+                <td class="TableTd" ><%#Eval("GamesPlayed") %></td>
+                <td class="TableTd" ><%#Eval("Wins") %></td>
+                <td class="TableTd" ><%#Eval("Draws") %></td>
+                <td class="TableTd" ><%#Eval("Losses") %></td>
+                <td class="TableTd" ><%#Eval("Points") %></td>
+                <td class="TableTd" ><img src='<%#Eval("Tpic") %>' alt='<%#Eval("TeamName") + "סמל של" %>' /></td>
+                
+            </tr>
+            </ItemTemplate>
+        </asp:Repeater>
 
 
 
-</html>
+    </table>
+   </div>
+
+
+
+
+                              
+          </div>
+
+
+
+
+
+
+
+
+</asp:Content>
+
