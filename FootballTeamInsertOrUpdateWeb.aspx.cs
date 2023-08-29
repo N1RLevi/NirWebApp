@@ -95,7 +95,7 @@ namespace NirWebApp
                 }
             else
                 {
-                LitUpdateOrInsert.Text = result + " : FootballTeamsById ההוספה או העדכון כן עבר עבר בהצלחה לך תחפש את הרשומה באתר";
+                LitUpdateOrInsert.Text = result + " : FootballTeamsById ההוספה או העדכון  עבר  בהצלחה אפשר גם למצוא את הרשומה באתר";
                 DataTable dt = FBTeams.GetById(idTeam);
                 repTableTeams.DataSource = dt;
                 repTableTeams.DataBind();

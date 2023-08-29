@@ -1,7 +1,6 @@
 ﻿body {
     background-image: url(Images/BackGroundImg.jpg);
     background-color: lightgray;
-    background-position: 50% 0;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -21,7 +20,7 @@ table {
     color: #FFF;
     text-align: center;
     font-family: Inter;
-    font-size: 36px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -67,7 +66,7 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    gap:20px;
 }
 
 .btnSend {
@@ -118,12 +117,25 @@ table {
 
 
 .FUL {
-    width: 183px;
-    height: 40px;
+    width: 153px;
+    height: 20px;
     flex-shrink: 0;
     background: #FFF;
-
+    border-radius:12px;
 }
 
 
+.top-container{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    gap:20px;
+}
 
+.textBox__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

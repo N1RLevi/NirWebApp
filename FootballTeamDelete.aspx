@@ -21,7 +21,7 @@
 
             </div>
 
-            <div class="littxt" >
+            <div class="litTxt" >
 
                 <asp:Literal  runat="server" ID="LitResult"> </asp:Literal>
 

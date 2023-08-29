@@ -3,13 +3,14 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <div class="CenterCenter" >
+      
 
-        <div class="CenterCenter" >
+        <div class="top-container" >
 
-              <div class="CenterCenter" >
             <h1 class="TitleOne" >Insert or Update Team</h1>
-            
+            <div class="textBox__container">
+                   
+                          
                    <asp:TextBox Class="txtBox" ID="txtIdTeam" name="txtIdTeam" runat="server" placeholder="לעדכון הזן אידיי"></asp:TextBox>
                    <asp:TextBox Class="txtBox" ID="txtTeamName" name="txtTeamName" runat="server" placeholder="הזן שם קבוצה"></asp:TextBox>
                    <asp:TextBox Class="txtBox" ID="txtGamesPlayed" name="txtGamesPlayed" runat="server" placeholder="כמות משחקים"></asp:TextBox>
@@ -18,37 +19,41 @@
                    <asp:TextBox Class="txtBox" ID="txtLosses" name="txtLosses" runat="server" placeholder="כמות הפסדים"></asp:TextBox>
                    <asp:TextBox Class="txtBox" ID="txtPoints" name="txtPoints" runat="server" placeholder="כמות נקודות"></asp:TextBox>
 
+                <div  class="textBox__container" >
+
                    <asp:TextBox Class="txtBox"  ID="txtTpic" name="txtTpic" runat="server" placeholder="שם הסמל"></asp:TextBox>
                    <asp:FileUpload  Class="FUL" ID="fileUploadTpic" runat="server" />
             
             
                    <asp:Button  Class="btnSend" ID="btnInsertOrUpdate" runat="server" Text="Insert/Update" OnClick="btnInsertOrUpdate_Click" />
-            </div>
+                </div>
+        
 
 
-
+     </div>
 
         </div>
 
 
-                    <div class="CenterCenter"  >
+                    
+                    <div class="textBox__container"   >
 
 
                   
+                        
+                  <div class="litTxt" >
 
-            <div class="littxt" >
-
-                <asp:Literal  runat="server" ID="LitUpdateOrInsert"> </asp:Literal>
-
-            </div>
+                <asp:Literal   runat="server" ID="LitUpdateOrInsert"> </asp:Literal>
+                      
+                  </div>
   
 
-                  </div>
+            </div>
 
 
   
             
-   <div class="CenterCenter" >
+   <div class="textBox__container" >
     <table  class="TableClass"  >
         <tr class="TableTr">
              <th class="TableTh" >ID של הקבוצות</th>
@@ -88,7 +93,7 @@
 
   
 
-            </div>
+            
 
      
 
