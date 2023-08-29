@@ -68,10 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FootballTeamDelete.aspx" />
-    <Content Include="FootballTeams.aspx" />
+    <Content Include="FootballTeams.aspx">
+      <BrowseToURL>~/FootballTeams.aspx</BrowseToURL>
+    </Content>
     <Content Include="FootballTeamsById.aspx" />
     <Content Include="Global.asax" />
     <Content Include="FootballTeamInsertOrUpdateWeb.aspx" />
+    <Content Include="NiRizov.css" />
+    <Content Include="PageNirSonMaster.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,10 +112,25 @@
     <Compile Include="FootballTeamInsertOrUpdateWeb.aspx.designer.cs">
       <DependentUpon>FootballTeamInsertOrUpdateWeb.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PageMasterNir.Master.cs">
+      <DependentUpon>PageMasterNir.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageMasterNir.Master.designer.cs">
+      <DependentUpon>PageMasterNir.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PageNirSonMaster.aspx.cs">
+      <DependentUpon>PageNirSonMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageNirSonMaster.aspx.designer.cs">
+      <DependentUpon>PageNirSonMaster.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="PageMasterNir.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

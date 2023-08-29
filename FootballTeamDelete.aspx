@@ -1,33 +1,40 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FootballTeamDelete.aspx.cs" Inherits="NirWebApp.FootballTeamDelete" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PageMasterNir.Master" AutoEventWireup="true" CodeBehind="FootballTeamDelete.aspx.cs" Inherits="NirWebApp.FootballTeamDelete" %>
 
 
-                        <h1>ניר לוי </h1>
-            <h1>טבלת קבוצות ליגת העל </h1>
 
-            <div>
-                <h1>הזן ID ולחץ על כפתור שליחה</h1>
 
-                <asp:Button  ID="btnSubmitDelete" runat="server" Text="שלח"  name="btnSubmitDelete" onclick="btnSubmitDelete_Click" />
-                <asp:TextBox ID="txtId" name="txtId" runat="server" placeholder="להצגת הרשומה ID הזן מספר "  />   
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
+     
+        <div class="CenterCenter">
+
+
+                        <h1 class="TitleOne">ניר לוי </h1>
+            <h1 class="TitleOne" >למחוק קבוצה טבלת ליגת העל </h1>
+
+            <div  class="CenterCenter" >
+                <h1 class="TitleOne" >הזן ID לחץ על כפתור שליחה</h1>
+
+                <asp:Button Class="btnSend"  ID="btnSubmitDelete" runat="server" Text="שלח"  name="btnSubmitDelete" onclick="btnSubmitDelete_Click" />
+                <asp:TextBox Class="txtBox" ID="txtId" name="txtId" runat="server" placeholder="להצגת הרשומה ID הזן מספר "  />   
 
             </div>
 
-            <div>
+            <div class="litTxt" >
 
-                <asp:Literal runat="server" ID="LitResult"></asp:Literal>
+                <asp:Literal  runat="server" ID="LitResult"> </asp:Literal>
 
             </div>
         </div>
-    </form>
-</body>
-</html>
+
+
+
+
+
+
+</asp:Content>
+
+
+
+
